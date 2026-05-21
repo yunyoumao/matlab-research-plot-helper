@@ -1,0 +1,15 @@
+.codex/
+.claude/
+AGENTS.md
+CLAUDE.md
+private/
+notes/
+handoff.md
+project-memory/
+*.bak
+*.tmp
+*.log
+*.asv
+*.m~
+.DS_Store
+Thumbs.db
