@@ -54,12 +54,13 @@ EXPECTED_OUTPUTS = [
     "examples/after/comparison_after.svg",
 ]
 
-TEXT_EXTENSIONS = {".md", ".m", ".py", ".csv", ".gitignore", ".gitattributes"}
+TEXT_EXTENSIONS = {".md", ".m", ".py", ".csv", ".svg", ".gitignore", ".gitattributes"}
 
 SENSITIVE_PATTERNS = {
     "email": re.compile(r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b"),
     "phone": re.compile(r"\b(?:1[3-9]\d{9}|\+?\d{1,3}[-\s]\d{3,4}[-\s]\d{4})\b"),
-    "windows_path": re.compile(r"\b[A-Za-z]:\\"),
+    "windows_path": re.compile(r"\b[A-Za-z]:\\+"),
+    "software_version_fingerprint": re.compile(r"<desc>MATLAB, The MathWorks, Inc\. Version", re.IGNORECASE),
     "credential": re.compile(
         r"(?i)\b("
         + r"api[_-]?"
